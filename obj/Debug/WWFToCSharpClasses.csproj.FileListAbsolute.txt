@@ -1,0 +1,6 @@
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\bin\Debug\WWFToCSharpClasses.exe.config
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\bin\Debug\WWFToCSharpClasses.exe
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\bin\Debug\WWFToCSharpClasses.pdb
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\obj\Debug\WWFToCSharpClasses.csprojAssemblyReference.cache
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\obj\Debug\WWFToCSharpClasses.exe
+C:\Users\nathan.ramirez\source\repos\WWFToCSharpClasses\obj\Debug\WWFToCSharpClasses.pdb
