@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using WWFToCSharpClasses.Builders;
 using WWFToCSharpClasses.ClassObjects;
@@ -14,9 +15,6 @@ namespace WWFToCSharpClasses
   {
     static void Main(string[] args)
     {
-#if DEBUG
-      args[0] = @"";
-#endif
       if (!args.Any())
         return;
 
@@ -30,7 +28,8 @@ namespace WWFToCSharpClasses
 
       var classObject = new BaseCOBJ
       {
-        Name = activityBuilder.Name,
+        Namespace = activityBuilder.Name,
+        Name = Regex.Match(activityBuilder.Name, @"[^.]*$").Value,
         Arguments = activityBuilder.Properties.Select(p => new PropertyCOBJ {Name = p.Name, Type = p.Type.FullName}),
         Properties = result
       };
