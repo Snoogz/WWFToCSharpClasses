@@ -1,1 +1,1 @@
-﻿public {propertytype} {propertyname} #{ get; set; #}
+﻿public {propertytype} {propertyname} { get; set; }

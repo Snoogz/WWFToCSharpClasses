@@ -125,12 +125,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Templates\ArgumentTemplate.txt" />
+    <Content Include="Templates\AssemblyTemplate.txt" />
     <Content Include="Workflows\BuildCodeList.txt" />
     <EmbeddedResource Include="Templates\ClassBaseTemplate.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Compile Include="Traversal\ActivityTraversal.cs" />
     <Compile Include="WWFObjects\BaseWWF.cs" />
+    <Compile Include="WWFObjects\CodeActivityWWF.cs" />
+    <Compile Include="WWFObjects\PropertyWWF.cs" />
     <Compile Include="WWFObjects\SequenceWWF.cs" />
     <Compile Include="WWFObjects\TryCatchWWF.cs" />
     <Content Include="Templates\MethodCallTemplate.txt" />

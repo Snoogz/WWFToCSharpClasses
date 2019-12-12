@@ -6,7 +6,7 @@ namespace WWFToCSharpClasses.ClassObjects
   public class MethodCOBJ
   {
     public string Name { get; set; }
-    public string ReturnType { get; set; }
+    public string ReturnVariable { get; set; }
     public IEnumerable<PropertyCOBJ> Arguments { get; set; }
   }
 }

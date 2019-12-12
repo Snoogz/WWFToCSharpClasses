@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using WWFToCSharpClasses.Builders;
 using WWFToCSharpClasses.ClassObjects;
 using WWFToCSharpClasses.Converters;
@@ -26,13 +21,7 @@ namespace WWFToCSharpClasses
 
       var result = ActivityTraversal.Start(rootActivity);
 
-      var classObject = new BaseCOBJ
-      {
-        Namespace = activityBuilder.Name,
-        Name = Regex.Match(activityBuilder.Name, @"[^.]*$").Value,
-        Arguments = activityBuilder.Properties.Select(p => new PropertyCOBJ {Name = p.Name, Type = p.Type.FullName}),
-        Properties = result
-      };
+      var classObject = new BaseCOBJ(activityBuilder, result);
 
       CClassBuilder.Start(classObject);
     }

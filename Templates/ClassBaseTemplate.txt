@@ -1,4 +1,6 @@
-﻿namespace {namespace}
+﻿{classassemblies}
+
+namespace {namespace}
 {
   public class {classname}
   {
