@@ -1,0 +1,4 @@
+﻿foreach (var {foreachiterator} in {foreachvalues})
+{
+	{foreachbody}
+}

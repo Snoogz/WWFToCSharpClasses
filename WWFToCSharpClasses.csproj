@@ -33,9 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -118,33 +129,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\CClassBuilder.cs" />
+    <Compile Include="Builders\WWFActivityBuilder.cs" />
     <Compile Include="ClassObjects\BaseCOBJ.cs" />
     <Compile Include="ClassObjects\MethodCOBJ.cs" />
     <Compile Include="ClassObjects\PropertyCOBJ.cs" />
-    <Compile Include="Converters\ConvertTo.cs" />
+    <Compile Include="Converters\FromGenericWWFObject.cs" />
+    <Compile Include="Converters\FromXAML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraversalObjects\PropertyTraversalObject.cs" />
     <Content Include="Templates\ArgumentTemplate.txt" />
     <Content Include="Templates\AssemblyTemplate.txt" />
+    <Content Include="Templates\ForEachTemplate.txt" />
     <Content Include="Workflows\BuildCodeList.txt" />
     <EmbeddedResource Include="Templates\ClassBaseTemplate.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Compile Include="Traversal\ActivityTraversal.cs" />
-    <Compile Include="WWFObjects\BaseWWF.cs" />
-    <Compile Include="WWFObjects\CodeActivityWWF.cs" />
-    <Compile Include="WWFObjects\PropertyWWF.cs" />
-    <Compile Include="WWFObjects\SequenceWWF.cs" />
-    <Compile Include="WWFObjects\TryCatchWWF.cs" />
+    <Compile Include="Transfer\TransferObject.cs" />
+    <Compile Include="TraversalObjects\BaseTraversalObject.cs" />
+    <Compile Include="TraversalObjects\ICodeActivityTraversalObject.cs" />
+    <Compile Include="TraversalObjects\IForEachTraversalObject.cs" />
+    <Compile Include="TraversalObjects\IIfTraversalObject.cs" />
+    <Compile Include="TraversalObjects\ITryCatchTraversalObject.cs" />
     <Content Include="Templates\MethodCallTemplate.txt" />
     <Content Include="Templates\PropertyTemplate.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Results\" />
-    <Folder Include="TraversalObjects\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
